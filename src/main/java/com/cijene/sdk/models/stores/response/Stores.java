@@ -6,14 +6,13 @@ import java.util.List;
 
 /**
  * Response wrapper containing a list of stores.
- *
- * Returned by store search and chain-based store lookup endpoints.
+ * <p>
+ * Returned by {@link com.cijene.sdk.service.StoresService#getStoresByChain}
+ * and {@link com.cijene.sdk.service.StoresService#getStoresBySearchRequest}.
  */
 @Data
 public class Stores {
 
-    /**
-     * List of store entities matching the request criteria.
-     */
+    /** List of store entities matching the request criteria. */
     private List<Store> stores;
 }

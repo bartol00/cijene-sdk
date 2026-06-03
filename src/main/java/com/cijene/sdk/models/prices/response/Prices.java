@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * Response object containing a list of product prices.
+ * <p>
  * Returned by {@link com.cijene.sdk.service.PricesService#getPricesByPriceSearchRequest}
  * and represents the aggregated result of a price search query.
  */
@@ -15,6 +16,7 @@ public class Prices {
 
     /**
      * List of price entries returned by the API.
+     * <p>
      * Each entry represents product pricing for a specific store,
      * chain and point in time.
      */

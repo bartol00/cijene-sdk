@@ -8,17 +8,27 @@ import com.cijene.sdk.models.products.response.Products;
 
 /**
  * Implementation of product-related API operations.
- * Provides access to
- * product lookup by EAN and
- * product search by query.
+ * <p>
+ * Provides access to:
+ * <ul>
+ *     <li>Product lookup by EAN</li>
+ *     <li>Product search by query</li>
+ * </ul>
  */
 public interface ProductsService {
 
     /**
      * Retrieves a single product using its EAN code
      * along with optional date and store chain filters.
+     * <p>
+     * Validation rules:
+     * <ul>
+     *     <li>Request must not be null</li>
+     *     <li>Product EAN list must not be null or blank</li>
+     * </ul>
+     *
      * @param request product lookup request containing EAN and optional filters
-     * @return {@link Product} details for the specified EAN
+     * @return product details for the specified EAN
      * @throws IllegalArgumentException if request or EAN is missing/invalid
      * @throws ApiException if the API request fails or returns an error response
      */
@@ -26,11 +36,16 @@ public interface ProductsService {
             throws IllegalArgumentException, ApiException;
 
     /**
-     * Searches for products using a mandatory text query and optional filters
-     * which include: the date, list of store chains and number of results to return.
-     * Fuzzy searching can also be enabled.
+     * Searches for products using a mandatory text query and optional parameters.
+     * <p>
+     * Validation rules:
+     * <ul>
+     *     <li>Request must not be null</li>
+     *     <li>Product query must not be null or blank</li>
+     * </ul>
+     *
      * @param request search parameters including query and optional filters
-     * @return {@link Products} list of products matching the search criteria
+     * @return list of products matching the search criteria
      * @throws IllegalArgumentException if request or query is missing/invalid
      * @throws ApiException if the API request fails or returns an error response
      */

@@ -1,3 +1,4 @@
+import com.cijene.sdk.models.stores.response.ChainStats;
 import org.junit.jupiter.api.Test;
 import com.cijene.sdk.models.stores.request.StoreSearchRequest;
 import com.cijene.sdk.models.stores.response.Chains;
@@ -13,12 +14,12 @@ import static shared.TestHelpers.*;
 public class StoresServiceTest {
 
     @Test
-    void getChainObjectSuccess() {
+    void getChainsSuccess() {
         // given
         StoresService service = new StoresServiceImpl(apiClient, apiToken());
 
         // when
-        Chains chains = service.getChainObject();
+        Chains chains = service.getChains();
 
         // then
         assertNotNull(chains);
@@ -100,6 +101,19 @@ public class StoresServiceTest {
         // then
         assertNotNull(stores);
         assertNotEquals(0, stores.getStores().size());
+    }
+
+    @Test
+    void getChainStatsSuccess() {
+        // given
+        StoresService service = new StoresServiceImpl(apiClient, apiToken());
+
+        // when
+        ChainStats chainStats = service.getChainStats();
+
+        // then
+        assertNotNull(chainStats);
+        assertNotEquals(0, chainStats.getChainStats().size());
     }
 
 }

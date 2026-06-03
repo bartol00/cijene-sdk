@@ -6,12 +6,13 @@ import java.util.List;
 
 /**
  * Response wrapper containing a list of products returned by the API.
- * This is the top-level response for product search operations.
+ * <p>
+ * Returned by {@link com.cijene.sdk.service.ProductsService#getProductBySearchRequest}
+ * and represents the top-level response for product search operations.
  */
 @Data
 public class Products {
-    /**
-     * List of products matching the search criteria.
-     */
+
+    /** List of products matching the search criteria. */
     List<Product> products;
 }

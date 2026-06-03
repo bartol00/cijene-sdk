@@ -8,6 +8,7 @@ import java.time.LocalDate;
 /**
  * Represents product information specific to a store chain.
  * Contains chain-level pricing, categorization and metadata.
+ * <p>
  * This allows comparison of product prices across retailers.
  */
 @Data

@@ -6,11 +6,14 @@ import java.util.List;
 
 /**
  * Represents a product returned by the Cijene API.
- * Contains general product metadata such as its
- * EAN code,
- * brand and name,
- * quantity and unit,
- * and pricing information per store chain
+ * <p>
+ * Contains general product metadata such as its:
+ * <ul>
+ *     <li>EAN code</li>
+ *     <li>Brand and name</li>
+ *     <li>Quantity and unit</li>
+ *     <li>Pricing information per store chain</li>
+ * </ul>
  */
 @Data
 public class Product {
