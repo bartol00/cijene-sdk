@@ -6,7 +6,7 @@
 
     <groupId>io.github.bartol00</groupId>
     <artifactId>cijene-sdk</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>Cijene API SDK</name>
     <description>Java SDK for communicating with the Cijene API</description>
