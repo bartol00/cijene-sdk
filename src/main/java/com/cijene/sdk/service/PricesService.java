@@ -9,6 +9,8 @@ import com.cijene.sdk.models.prices.response.Prices;
  * <p>
  * Provides methods to query prices using EAN codes and optional filters
  * such as store chains and geographic location.
+ *
+ * @author Damjan Bartol Benjak
  */
 public interface PricesService {
 

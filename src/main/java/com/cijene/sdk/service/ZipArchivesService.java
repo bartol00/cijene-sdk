@@ -8,6 +8,8 @@ import com.cijene.sdk.models.zip.ZipArchives;
  * <p>
  * Provides access to downloadable archives containing raw price data
  * collected by the Cijene data ingestion pipeline.
+ *
+ * @author Damjan Bartol Benjak
  */
 public interface ZipArchivesService {
 

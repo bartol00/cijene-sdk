@@ -16,6 +16,8 @@ import com.cijene.sdk.models.stores.response.Stores;
  *     <li>Store search using filters and geolocation</li>
  *     <li>Currently available data per chain</li>
  * </ul>
+ *
+ * @author Damjan Bartol Benjak
  */
 public interface StoresService {
 

@@ -14,6 +14,8 @@ import com.cijene.sdk.models.products.response.Products;
  *     <li>Product lookup by EAN</li>
  *     <li>Product search by query</li>
  * </ul>
+ *
+ * @author Damjan Bartol Benjak
  */
 public interface ProductsService {
 
