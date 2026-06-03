@@ -1,5 +1,6 @@
 package com.cijene.sdk.service.impl;
 
+import com.cijene.sdk.models.stores.response.ChainStats;
 import com.segurapass.api.ApiClient;
 import com.segurapass.exception.ApiException;
 import com.cijene.sdk.models.stores.response.Chains;
@@ -26,7 +27,7 @@ public class StoresServiceImpl implements StoresService {
     }
 
     @Override
-    public Chains getChainObject() throws ApiException {
+    public Chains getChains() throws ApiException {
         String endpoint = "/v1/chains/";
         return apiClient.sendGetRequest(
                 endpoint,
@@ -96,6 +97,17 @@ public class StoresServiceImpl implements StoresService {
                 queryParams,
                 headers,
                 Stores.class
+        ).body();
+    }
+
+    @Override
+    public ChainStats getChainStats() throws ApiException {
+        String endpoint = "/v1/chain-stats/";
+        return apiClient.sendGetRequest(
+                endpoint,
+                null,
+                headers,
+                ChainStats.class
         ).body();
     }
 
